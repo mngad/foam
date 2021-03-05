@@ -90,11 +90,6 @@ describe('hashtag extraction', () => {
       new Set(['hello-world', 'this_planet'])
     );
   });
-  it('ignores tags that only have numbers in text', () => {
-    expect(
-      extractHashtags('this #123 tag should be ignore, but not #123four')
-    ).toEqual(new Set(['123four']));
-  });
 
   it('ignores hashes in plain text urls and links', () => {
     expect(

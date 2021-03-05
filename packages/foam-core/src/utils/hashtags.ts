@@ -1,6 +1,6 @@
 import { isSome } from './core';
-const HASHTAG_REGEX = /(^|[ ])#([\w_-]*[a-zA-Z][\w_-]*\b)/gm;
-const WORD_REGEX = /(^|[ ])([\w_-]*[a-zA-Z][\w_-]*\b)/gm;
+const HASHTAG_REGEX = /(^|[ ])#([\w_-]*[a-zA-Z0-9][\w_-]*\b)/gm;
+const WORD_REGEX = /(^|[ ])([\w_-]*[a-zA-Z0-9][\w_-]*\b)/gm;
 
 export const extractHashtags = (text: string): Set<string> => {
   return isSome(text)
